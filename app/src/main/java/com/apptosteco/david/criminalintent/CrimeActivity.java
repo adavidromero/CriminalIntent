@@ -1,13 +1,20 @@
 package com.apptosteco.david.criminalintent;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 
-public class CrimeActivity extends AppCompatActivity {
+import java.util.UUID;
+
+public class CrimeActivity extends SingleFragmentActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crime);
+    protected Fragment createFragment(){
+        //return new CrimeFragment();
+        UUID crimeId = (UUID)getIntent().getSerializableExtra(CrimeFragment.EXTRA_CRIME_ID);
+
+        return CrimeFragment.newInstance(crimeId);
     }
+
 }
