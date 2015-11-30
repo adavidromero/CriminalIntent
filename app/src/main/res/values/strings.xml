@@ -7,6 +7,10 @@
     <string name="crime_solved_label">Solved?</string>
     <string name="crimes_title">Crimes</string>
     <string name="crime_title">Crime Title</string>
+    <string name="date_picker_title">Date of Crime:</string>
+    <string name="not_ok">No Aceptar</string>
+
+
 
 
 <!-- TODO: Remove or change this placeholder text -->
